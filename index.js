@@ -32,12 +32,6 @@ Item.insertMany(defaultItems, function(err) {
 })
 
 app.get("/", function(req, res){
-    let options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long"
-    }
-
  res.render("list", {listTitle: "Today", newListItems: items}) 
 })
 
