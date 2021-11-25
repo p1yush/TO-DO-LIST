@@ -57,9 +57,22 @@ p {
   color: #ffffff;
 }
 
-form {
+form.item {
   text-align: center;
-  margin-left: 20px;
+  margin-left: 15px;
+  background-color: #212121;
+}
+
+button.delete {
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #212121;
+  color: #ffffff;
+  font-size: 20px;
+  padding-bottom: 3px;
+  border-width: 0;
 }
 
 button {
@@ -71,7 +84,7 @@ button {
   color: #212121;
   font-size: 30px;
   font-weight: bold;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
   border-width: 0;
 }
 

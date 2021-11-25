@@ -49,6 +49,17 @@ app.post("/", function(req, res){
     res.redirect("/")
 }) 
 
+app.post("/delete", function(req, res) {
+    const wantToDelete = req.body.send
+    Item.findByIdAndRemove(wantToDelete, function(err) {
+        if(!err) {
+         console.log("deleted")
+         res.redirect("/")
+        }
+    })
+})
+
+
 app.get("/work", function(req,res) {
     res.render("list", {listTitle: "Work List", newListItems: workItems})
 })
