@@ -9,13 +9,13 @@ app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static('public'))
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true})
+mongoose.connect("mongodb+srv://rinku:RR2isCR7@cluster0.jde08.mongodb.net/todolistDB", {useNewUrlParser: true})
 
 const itemSchema = {
     name: String
 }
 
-const Item = mongoose.model("item", itemSchema)
+const Item = mongoose.model("item", itemSchema)  
 
 const item1 = new Item({
     name: "Welcome to your todolist"
@@ -35,7 +35,7 @@ app.get("/", function(req, res){
         })
         res.redirect("/")
      } else {
-    res.render("list", {listTitle: "Today", newListItems: foundItems}) 
+    res.render("list", {listTitle: "ToDo List", newListItems: foundItems}) 
      }
  })
 })
